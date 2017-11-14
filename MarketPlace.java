@@ -25,6 +25,45 @@ public class MarketPlace {
         //avg arrival time
         avgTimeBtwnCustomers = 2.5;
     }
-    
+    public int getNumCashiers() {
+        return numOfCashiers;
+    }
+    public double getArrivalTime() {
+        return avgTimeBtwnCustomers;
+    }
+    public double getServiceTime() {
+        return avgCashierServTime;
+    }
+    //FIXME: Figure out how to return # of customers served
+    public int getNumCustomersServed() {
+        return customersInLine.size();
+    }
+    public String getReport() {
+        //FIXME: Return a report of results (toString)
+        results = "";
+        return results;
+    }
+    public int getLongestLineLength() {
+        //FIXME: Return the LONGEST line
+        return customersInLine.size();
+    }
+        //FIXME: Ask
+    public int getAverageWaitTime() {
+        int avgWaitTime;
+        avgWaitTime = (int) (avgCashierServTime * customersInLine.size());
+        return avgWaitTime;
+    }
+    //SETTERS
+    public void setParameters(int num, double s, double a, boolean ck) {
+        numOfCashiers = num;
+        avgCashierServTime = s;
+        avgTimeBtwnCustomers = a;
+        displayCheckout = ck;
+    }
+    public void customerGetsInLine() {
 
+    }
+    public void customerPays(int num) {
+
+    }
 }

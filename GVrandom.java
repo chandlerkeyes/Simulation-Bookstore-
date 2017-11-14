@@ -1,4 +1,6 @@
-public class GVrandom extends Random{
+import java.util.Random;
+
+public class GVrandom extends Random {
 
     // modifies the normal curve by a ratio
     private final double SD = 0.5;
